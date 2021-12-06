@@ -42,7 +42,7 @@ const Weather = ({ weather, location }) => {
         <div className="box">
           <h4>{getDate()}</h4>
           <h2>{Math.round(weather.current.temp)} &#8451; in {capitalizeLetters(location)}</h2>
-          <img src={`http://openweathermap.org/img/wn/${weather.current.weather[0].icon}@2x.png`} alt={weather.current.weather[0].main} width="100"/> 
+          <img src={`https://openweathermap.org/img/wn/${weather.current.weather[0].icon}@2x.png`} alt={weather.current.weather[0].main} width="100"/> 
           <h2>{weather.current.weather[0].description}</h2>
           <p>Timezone: {weather.timezone}</p>
         </div>
@@ -64,7 +64,7 @@ const Weather = ({ weather, location }) => {
           <div key={forecast.dt}>
             <p><b>{getDayOfWeek(new Date(forecast.dt * 1000))}:</b></p>
             <p>{Math.round(forecast.temp.day)} &#8451;, {forecast.weather[0].description}</p>
-            <img src={`http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`} alt={`${forecast.weather[0].description}`} />
+            <img src={`https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`} alt={`${forecast.weather[0].description}`} />
           </div>
         )}
       </div>
@@ -79,7 +79,7 @@ const Weather = ({ weather, location }) => {
               <span key={index}> 
               {weather.description}
                 <img
-                  src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`}
+                  src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
                   alt={`${weather.description}`
                 }/>
               </span>
