@@ -217,6 +217,12 @@ iframe {
     padding: 0;
     margin: 0;
   }
+  .weather {
+    width: 100%;
+  }
+  .description {
+    margin-top: 0;
+  }
   .forecast-daily {
     display: flex;
     flex-direction: column;
@@ -226,6 +232,9 @@ iframe {
     width: 200px;
   }
   .forecast-hourly {
-    width: 100%;
-}
+    width: 90%;
+  }
+  .forecast-hourly img {
+    display: none;
+  }
 }

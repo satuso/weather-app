@@ -46,7 +46,7 @@ const Weather = ({ weather, location }) => {
           <h2>{weather.current.weather[0].description}</h2>
           <p>Timezone: {weather.timezone}</p>
         </div>
-        <div>
+        <div className="description">
           <p>Description: {weather.current.weather[0].description}</p>
           <p>Feels like: {Math.round(weather.current.feels_like)} &#8451;</p>
           <p>Temp min: {Math.round(weather.daily[0].temp.min)} &#8451;</p>

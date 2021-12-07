@@ -27,7 +27,7 @@ const App = () => {
           setLocation(response.data[0].name)
       })
       .catch(error => {
-        setMsg("Error. Please try again.")
+        setMsg("Error. Weather data unavailable.")
         setWeather(null)
       })
     }
@@ -48,7 +48,7 @@ const App = () => {
           setCoordinates([response.data[0].lat, response.data[0].lon])
         })
         .catch(error => {
-          setMsg("Error. Please try again.")
+          setMsg("Error. Weather data unavailable.")
           setWeather(null)
         })
       }
@@ -62,7 +62,7 @@ const App = () => {
         setWeather(response.data)
       })
       .catch(error => {
-        setMsg("Error. Please try again.")
+        setMsg("Error. Weather data unavailable.")
         setWeather(null)
       })
     }
