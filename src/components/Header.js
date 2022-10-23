@@ -12,7 +12,7 @@ const Header = ({ submitForm, userInput, handleChange, getLocation }) => {
         <form onSubmit={submitForm}>
           <input
             type="text" 
-            placeholder="search location"
+            placeholder="Search location"
             className="search-input"
             value={userInput}
             onChange={handleChange}

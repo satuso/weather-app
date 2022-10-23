@@ -36,7 +36,7 @@ const App = () => {
   const getLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(reverseGeocode)
-      setMsg("Loading...")
+      setMsg("Please enable location to fetch local weather data automatically.")
     }
   }
 
