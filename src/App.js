@@ -79,7 +79,7 @@ const App = () => {
     setLocation(userInput)
     setUserInput("")
   }
-
+console.log(weather)
   return (
     <>
       <Header 

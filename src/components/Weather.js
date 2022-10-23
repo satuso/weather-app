@@ -63,8 +63,9 @@ const Weather = ({ weather, location }) => {
         {weather.daily.slice(0, 7).map(forecast => 
           <div key={forecast.dt}>
             <p><b>{getDayOfWeek(new Date(forecast.dt * 1000))}:</b></p>
-            <p>{Math.round(forecast.temp.day)} &#8451;, {forecast.weather[0].description}</p>
+            {forecast.weather[0].main}
             <img src={`https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`} alt={`${forecast.weather[0].description}`} />
+            <p>{Math.round(forecast.temp.day)} &#8451;, {forecast.weather[0].description}</p>
           </div>
         )}
       </div>
@@ -74,9 +75,10 @@ const Weather = ({ weather, location }) => {
           <div key={hour.dt}>
             <span>{getDayOfWeek(new Date(hour.dt * 1000))} </span>
             <span><b>{getHours(hour.dt)}</b> </span>
+            {hour.weather.map(weather => weather.main + " ")}
             <span>{hour.temp} &#8451; </span>
             {hour.weather.map((weather, index) =>
-              <span key={index}> 
+              <span key={index}>
               {weather.description}
                 <img
                   src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
